@@ -1,0 +1,8 @@
+.menuItem {
+  font-size: 26px;
+  color: black;
+  margin-right: 30px;
+}
+.activeMenuItem {
+  color: blue;
+}
