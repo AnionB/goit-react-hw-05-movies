@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { getReview } from 'components/FetchData/FetchData';
 
-function Reviews(props) {
+function Reviews() {
   const { movieId } = useParams();
   const [review, setReview] = useState();
   useEffect(() => {
@@ -24,7 +23,5 @@ function Reviews(props) {
     );
   }
 }
-
-Reviews.propTypes = {};
 
 export default Reviews;

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { getCasts } from 'components/FetchData/FetchData';
 
@@ -28,6 +27,5 @@ function Cast(props) {
     );
   }
 }
-Cast.propTypes = {};
 
 export default Cast;
