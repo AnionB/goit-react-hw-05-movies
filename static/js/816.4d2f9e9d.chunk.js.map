@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/816.4d2f9e9d.chunk.js","mappings":"6KAWA,UARA,WACE,OACE,0BACE,SAAC,KAAD","sources":["components/Movie/Movie.js"],"sourcesContent":["import React from 'react';\nimport { Outlet } from 'react-router-dom';\n\nfunction Movie() {\n  return (\n    <div>\n      <Outlet />\n    </div>\n  );\n}\n\nexport default Movie;\n"],"names":[],"sourceRoot":""}
