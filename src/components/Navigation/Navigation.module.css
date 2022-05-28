@@ -1,8 +1,19 @@
 .menuItem {
   font-size: 26px;
   color: black;
-  margin-right: 30px;
+  margin-left: 30px;
+  justify-content: center;
 }
 .activeMenuItem {
-  color: blue;
+  color: rgb(254, 160, 180);
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 2px solid #c7c7c7;
+  box-shadow: 0 0 15px 0 #000000;
+  vertical-align: middle;
+  text-align: center;
 }

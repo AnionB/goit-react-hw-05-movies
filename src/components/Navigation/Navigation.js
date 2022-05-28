@@ -4,7 +4,7 @@ import styles from './Navigation.module.css';
 
 function Navigation() {
   return (
-    <nav>
+    <nav className={styles.navBar}>
       <NavLink
         to="/"
         className={({ isActive }) =>
@@ -14,7 +14,7 @@ function Navigation() {
         Home
       </NavLink>
       <NavLink
-        to="/movies"
+        to="movies"
         className={({ isActive }) =>
           styles.menuItem + ' ' + (isActive ? styles.activeMenuItem : '')
         }

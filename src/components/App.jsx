@@ -11,10 +11,10 @@ const Search = React.lazy(() => import('./Search/Search'));
 
 export const App = () => {
   return (
-    <Suspense fallback="Loading...">
+    <Suspense>
       <Navigation />
       <Routes>
-        <Route path="/" element={<PopularFilms />} />
+        <Route path="/*" element={<PopularFilms />} />
         <Route path="movies" element={<Movie />}>
           <Route path="" element={<Search />} />
           <Route path=":movieId" element={<MovieInfo />}>

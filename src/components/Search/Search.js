@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 
 import { getMovie } from 'components/FetchData/FetchData';
+import styles from './Search.module.css';
 
 function Search() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -18,7 +19,7 @@ function Search() {
   }
 
   return (
-    <div>
+    <div className={styles.searhThumb}>
       <form onSubmit={onSubmit}>
         <input type="search" name={'query'} />
         <input type="submit" value={'Search'} />

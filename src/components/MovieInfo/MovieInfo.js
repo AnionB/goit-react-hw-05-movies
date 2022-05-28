@@ -22,13 +22,15 @@ function MovieInfo(props) {
 
     return (
       <>
-        <button onClick={() => navigate(-1)}>go back</button>
+        <button className={styles.btnBack} onClick={() => navigate(-1)}>
+          &#10216;-Go back
+        </button>
         <div className={styles.filmThumb}>
           <img
             src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
             alt={`poster of ${original_title}`}
           />
-          <div className="filmInfoThumb">
+          <div className={styles.filmInfoThumb}>
             <h1>
               {original_title}({new Date(release_date).getFullYear()})
             </h1>
@@ -39,12 +41,18 @@ function MovieInfo(props) {
             <p>{genres.map(genre => genre.name).join(', ')}</p>
           </div>
         </div>
-        <div className="additionalInfo">
+        <div className={styles.additionalInfo}>
           <h3>Additional information</h3>
-          <Link to={'cast'}>Cast</Link>
-          <Link to={'reviews'}>Reviews</Link>
-          <Outlet></Outlet>
+          <ul>
+            <li>
+              <Link to={'cast'}>Cast</Link>
+            </li>
+            <li>
+              <Link to={'reviews'}>Reviews</Link>
+            </li>
+          </ul>
         </div>
+        <Outlet />
       </>
     );
   }

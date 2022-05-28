@@ -1,3 +1,22 @@
 .filmThumb {
   display: flex;
+  margin-top: 20px;
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 15px;
+}
+
+.btnBack {
+  margin-top: 20px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  width: 100px;
+  height: 30px;
+}
+.additionalInfo {
+  margin-top: 20px;
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 15px;
+}
+.filmInfoThumb {
+  margin-left: 20px;
 }
