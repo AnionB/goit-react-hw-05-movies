@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/230.cfa365cb.chunk.css","mappings":"AAAA,4BAEE,UAAY,CADZ,cAAe,CAEf,iBACF,CACA,kCACE,UACF","sources":["components/Navigation/Navigation.module.css"],"sourcesContent":[".menuItem {\n  font-size: 26px;\n  color: black;\n  margin-right: 30px;\n}\n.activeMenuItem {\n  color: blue;\n}\n"],"names":[],"sourceRoot":""}
