@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Outlet, useParams, useNavigate } from 'react-router-dom';
-import { getMovieInfo } from 'components/FetchData/FetchData';
+import { Link, useParams, Routes, Route, useLocation } from 'react-router-dom';
+
+import { getMovieInfo } from '../../services/FetchData';
+
+import Cast from '../Cast/Cast';
+import Reviews from '../Reviews/Reviews';
+import BackBtn from '../BackBtn/BackBtn';
+
 import styles from './MovieInfo.module.css';
 
-function MovieInfo(props) {
+function MovieInfo() {
   const { movieId } = useParams();
+
   const [filmInfo, setFilmInfo] = useState();
-  let navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
     getMovieInfo(movieId).then(setFilmInfo);
   }, [movieId]);
@@ -22,9 +30,8 @@ function MovieInfo(props) {
 
     return (
       <>
-        <button className={styles.btnBack} onClick={() => navigate(-1)}>
-          &#10216;-Go back
-        </button>
+        <BackBtn loc={location} />
+
         <div className={styles.filmThumb}>
           <img
             src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
@@ -45,14 +52,21 @@ function MovieInfo(props) {
           <h3>Additional information</h3>
           <ul>
             <li>
-              <Link to={'cast'}>Cast</Link>
+              <Link to={'cast'} state={location.state}>
+                Cast
+              </Link>
             </li>
             <li>
-              <Link to={'reviews'}>Reviews</Link>
+              <Link to={'reviews'} state={location.state}>
+                Reviews
+              </Link>
             </li>
           </ul>
         </div>
-        <Outlet />
+        <Routes>
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Routes>
       </>
     );
   }

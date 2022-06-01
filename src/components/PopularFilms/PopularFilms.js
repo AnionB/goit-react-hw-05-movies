@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getPopularMovie } from 'components/FetchData/FetchData';
+import { getPopularMovie } from '../../services/FetchData';
 
 function PopularFilm() {
   const [trendMovies, setTrendMovies] = useState();
