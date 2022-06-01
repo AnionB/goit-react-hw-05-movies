@@ -14,12 +14,10 @@ function Search() {
     searchParams.toString() &&
       getMovie(searchParams.toString()).then(setFilmList);
   }, [searchParams]);
-
+  // тут коряво мне кажется, но по другому не придумал
   useEffect(() => {
-    if (searchParams.get('query')) {
-      console.log(searchParams.get('query'));
-      setQur(searchParams.get('query'));
-    }
+    searchParams.get('query') && setQur(searchParams.get('query'));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function onSubmit(e) {
@@ -27,7 +25,7 @@ function Search() {
     e.target.query.value.trim() &&
       setSearchParams({ query: e.target.query.value });
     setQur('');
-    e.target.reset();
+    // e.target.reset();
   }
 
   return (
