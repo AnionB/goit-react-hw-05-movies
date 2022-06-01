@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/786.f4e8b1b8.chunk.css","mappings":"AAAA,2BAEE,+BAAgC,CADhC,eAAgB,CAEhB,mBACF","sources":["components/Search/Search.module.css"],"sourcesContent":[".searchThumb {\n  margin-top: 20px;\n  border-bottom: 2px solid #c7c7c7;\n  padding-bottom: 15px;\n}\n"],"names":[],"sourceRoot":""}

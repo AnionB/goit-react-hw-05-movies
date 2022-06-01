@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/786.6c196a1b.chunk.css","mappings":"AAAA,0BAEE,+BAAgC,CADhC,eAAgB,CAEhB,mBACF","sources":["components/Search/Search.module.css"],"sourcesContent":[".searhThumb {\n  margin-top: 20px;\n  border-bottom: 2px solid #c7c7c7;\n  padding-bottom: 15px;\n}\n"],"names":[],"sourceRoot":""}
